@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+._*
+.AppleDouble
+
+# Xcode
+xcuserdata/
+DerivedData/
+build/
+*.xcuserstate
+
+# C build artifacts
+*.o
+*.obj
+*.out
+*.exe
+a.out

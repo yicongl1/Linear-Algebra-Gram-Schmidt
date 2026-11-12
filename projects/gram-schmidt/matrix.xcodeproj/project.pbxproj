@@ -41,7 +41,7 @@
 		217BF7E327B63EAE007204CB = {
 			isa = PBXGroup;
 			children = (
-				217BF7EE27B63EAE007204CB /* matrix */,
+				217BF7EE27B63EAE007204CB /* src */,
 				217BF7ED27B63EAE007204CB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,12 +54,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		217BF7EE27B63EAE007204CB /* matrix */ = {
+		217BF7EE27B63EAE007204CB /* src */ = {
 			isa = PBXGroup;
 			children = (
 				217BF7EF27B63EAE007204CB /* main.c */,
 			);
-			path = matrix;
+			path = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
