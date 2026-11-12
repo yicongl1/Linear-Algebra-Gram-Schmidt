@@ -1,3 +1,0 @@
-# .m is shared by Objective-C and MATLAB; Linguist needs the hint to classify
-# the MATLAB sources of projects/gram-schmidt/matlab as MATLAB.
-*.m linguist-language=MATLAB

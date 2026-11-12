@@ -26,7 +26,7 @@ Gram–Schmidt 正交化有两个理论上等价的版本：
 
 经典版对每个向量一次性减去全部投影：
 
-$$u_k = v_k - \sum_{j<k}\langle v_k, u_j\rangle\,u_j$$
+$$u_k = v_k - \sum_{j=1}^{k-1}\langle v_k, u_j\rangle\,u_j$$
 
 修正版把投影拆开，每减一次就更新当前向量：
 
@@ -121,7 +121,7 @@ aléatoires.
 
 La version classique retire toutes les projections en une fois :
 
-$$u_k = v_k - \sum_{j<k}\langle v_k, u_j\rangle\,u_j$$
+$$u_k = v_k - \sum_{j=1}^{k-1}\langle v_k, u_j\rangle\,u_j$$
 
 La version modifiée les applique successivement, en mettant à jour le vecteur à chaque étape :
 
