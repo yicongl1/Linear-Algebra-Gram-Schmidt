@@ -3,11 +3,11 @@
 [Français](#notes-de-code) · [中文](#中文笔记)
 
 本文档记录项目的数学背景、相关理论，以及两种实现的代码要点。完整推导与实验数据见
-[`../projects/gram-schmidt/report/rapport-TP-2022.pdf`](../projects/gram-schmidt/report/rapport-TP-2022.pdf)。
+[`../report/rapport-TP-2022.pdf`](../report/rapport-TP-2022.pdf)。
 
 Ce document rassemble le contexte mathématique, les notions associées et les points clés des deux
 implémentations. La théorie complète et les résultats expérimentaux figurent dans le
-[rapport](../projects/gram-schmidt/report/rapport-TP-2022.pdf).
+[rapport](../report/rapport-TP-2022.pdf).
 
 ---
 
@@ -43,7 +43,7 @@ $$\operatorname{proj}_{u}(v) = \frac{\langle v, u\rangle}{\langle u, u\rangle}\,
 
 ### 3. C 实现要点
 
-`projects/gram-schmidt/src/main.c` 由两个辅助函数和一个主循环组成。
+`main.c` 由两个辅助函数和一个主循环组成。
 
 ```c
 double produitscalaire(double a[], double b[], int l)  // 内积 ⟨a,b⟩
@@ -87,7 +87,7 @@ for (int i = 1; i <= y; i++) {
 编译与测试：
 
 ```bash
-gcc -O2 -Wall -o gs projects/gram-schmidt/src/main.c -lm
+gcc -O2 -Wall -o gs main.c -lm
 printf "3 3\n1 2 3\n2 -1 2\n1 1 2\n" | ./gs
 ```
 
@@ -95,7 +95,7 @@ printf "3 3\n1 2 3\n2 -1 2\n1 1 2\n" | ./gs
 
 ### 4. MATLAB 实现要点
 
-完整文件位于 [`../projects/gram-schmidt/matlab/`](../projects/gram-schmidt/matlab/)：
+完整文件位于 [`../matlab/`](../matlab/)：
 CGS 与 MGS 各一个函数文件、误差度量 `Erreur_moyenne.m`，以及 `demo_comparison.m`、
 `condition_experiment.m` 两个脚本。
 
@@ -137,7 +137,7 @@ xlabel('condition'); ylabel('erreur');
 ```
 
 实验结果显示，`cond` 增大时两种版本的差异随之增大，实验图见
-[`../projects/gram-schmidt/report/figures/`](../projects/gram-schmidt/report/figures/)。
+[`../report/figures/`](../report/figures/)。
 
 ---
 
@@ -178,7 +178,7 @@ propage le long de la chaîne d'itérations, tandis que celle de MGS reste local
 
 ### 3. Points clés de l'implémentation C
 
-`projects/gram-schmidt/src/main.c` se compose de deux fonctions auxiliaires et d'une boucle
+`main.c` se compose de deux fonctions auxiliaires et d'une boucle
 principale.
 
 ```c
@@ -222,7 +222,7 @@ Choix d'implémentation :
   ou d'une extension GNU, la forme portable étant `= {{0}}`.
 
 ```bash
-gcc -O2 -Wall -o gs projects/gram-schmidt/src/main.c -lm
+gcc -O2 -Wall -o gs main.c -lm
 printf "3 3\n1 2 3\n2 -1 2\n1 1 2\n" | ./gs
 ```
 
@@ -230,7 +230,7 @@ La sortie coïncide avec la matrice `Q` obtenue sous MATLAB.
 
 ### 4. Points clés de l'implémentation MATLAB
 
-Les fichiers complets se trouvent dans [`../projects/gram-schmidt/matlab/`](../projects/gram-schmidt/matlab/) :
+Les fichiers complets se trouvent dans [`../matlab/`](../matlab/) :
 une fonction par version, la mesure d'erreur `Erreur_moyenne.m`, puis les scripts
 `demo_comparison.m` et `condition_experiment.m`.
 
@@ -270,4 +270,4 @@ xlabel('condition'); ylabel('erreur');
 ```
 
 L'écart entre les deux versions croît avec `cond` ; les figures correspondantes se trouvent dans
-[`../projects/gram-schmidt/report/figures/`](../projects/gram-schmidt/report/figures/).
+[`../report/figures/`](../report/figures/).

@@ -8,6 +8,8 @@ xcuserdata/
 DerivedData/
 build/
 *.xcuserstate
+# Archived Xcode project: kept locally, outside the published repository
+archive/xcode-project/
 
 # C build artifacts
 *.o
