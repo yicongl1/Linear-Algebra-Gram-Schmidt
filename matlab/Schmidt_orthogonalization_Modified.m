@@ -1,3 +1,4 @@
+% Schmidt_orthogonalization_Modified.m
 function b = Schmidt_orthogonalization_Modified(a)
 % Orthogonalisation de Schmidt, version modifiee (MGS).
 % Le vecteur courant est mis a jour apres chaque projection, si bien que

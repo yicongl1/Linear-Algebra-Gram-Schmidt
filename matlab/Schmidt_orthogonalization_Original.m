@@ -1,3 +1,4 @@
+% Schmidt_orthogonalization_Original.m
 function b = Schmidt_orthogonalization_Original(a)
 % Orthogonalisation de Schmidt, version classique (CGS).
 % a : matrice dont les colonnes sont orthonormalisees

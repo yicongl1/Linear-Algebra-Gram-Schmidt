@@ -1,3 +1,4 @@
+% Erreur_moyenne.m
 function s = Erreur_moyenne(a, b)
 % Ecart entre deux matrices, au sens du carre de la norme de Frobenius.
 % La racine carree finale est omise, comme dans le rapport : la fonction
