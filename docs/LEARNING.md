@@ -95,6 +95,10 @@ printf "3 3\n1 2 3\n2 -1 2\n1 1 2\n" | ./gs
 
 ### 4. MATLAB 实现要点
 
+完整文件位于 [`../projects/gram-schmidt/matlab/`](../projects/gram-schmidt/matlab/)：
+CGS 与 MGS 各一个函数文件、误差度量 `Erreur_moyenne.m`，以及 `demo_comparison.m`、
+`condition_experiment.m` 两个脚本。
+
 误差度量函数：
 
 ```matlab
@@ -225,6 +229,12 @@ printf "3 3\n1 2 3\n2 -1 2\n1 1 2\n" | ./gs
 La sortie coïncide avec la matrice `Q` obtenue sous MATLAB.
 
 ### 4. Points clés de l'implémentation MATLAB
+
+Les fichiers complets se trouvent dans [`../projects/gram-schmidt/matlab/`](../projects/gram-schmidt/matlab/) :
+une fonction par version, la mesure d'erreur `Erreur_moyenne.m`, puis les scripts
+`demo_comparison.m` et `condition_experiment.m`.
+
+Mesure d'erreur :
 
 ```matlab
 function s = Erreur_moyenne(a, b)

@@ -47,12 +47,27 @@ numériquement plus stable.
 ```
 gram-schmidt/
 ├── src/main.c              # implémentation C (orthonormalisation par colonnes)
+├── matlab/                 # implémentations MATLAB et scripts d'expérience
 ├── matrix.xcodeproj/       # projet Xcode (groupe src)
 ├── report/
 │   ├── rapport-TP-2022.pdf # rapport complet (français)
 │   └── figures/            # figures du rapport, sorties MATLAB
 └── README.md
 ```
+
+### MATLAB
+
+```
+matlab/
+├── Schmidt_orthogonalization_Original.m   # version classique (CGS)
+├── Schmidt_orthogonalization_Modified.m   # version modifiée (MGS)
+├── Erreur_moyenne.m                       # écart ‖a-b‖_F² entre deux matrices
+├── demo_comparison.m                      # reproduit les résultats A et B ci-dessus
+└── condition_experiment.m                 # courbes conditionnement — erreur
+```
+
+`demo_comparison.m` reproduit `Q_CGS`, `Q_MGS`, `e(A)`, `e(B)` et les conditionnements du
+tableau ; `condition_experiment.m` génère les courbes de `report/figures/`.
 
 ### Compilation et exécution
 
@@ -101,6 +116,26 @@ l'interprétation géométrique (vecteurs presque parallèles, résidus, conditi
 
 对 100 个随机生成的 `100×100`、`cond > 10⁶` 的矩阵绘制"条件数—误差"图，误差随条件数
 单调上升，说明 MGS 的数值稳定性更好。
+
+### 实现
+
+```
+gram-schmidt/
+├── src/main.c              # C 实现（按列正交化）
+├── matlab/                 # MATLAB 实现与实验脚本
+├── matrix.xcodeproj/       # Xcode 工程
+├── report/
+│   ├── rapport-TP-2022.pdf # 报告全文（法语）
+│   └── figures/            # 报告插图与 MATLAB 输出
+└── README.md
+```
+
+MATLAB 文件：
+
+- `Schmidt_orthogonalization_Original.m`（经典版）、`Schmidt_orthogonalization_Modified.m`（修正版）
+- `Erreur_moyenne.m`：两矩阵之差的平方 Frobenius 范数
+- `demo_comparison.m`：复现上表的 `Q`、`e(A)`、`e(B)` 与条件数
+- `condition_experiment.m`：生成 `report/figures/` 中的条件数—误差曲线
 
 ### 编译与运行
 

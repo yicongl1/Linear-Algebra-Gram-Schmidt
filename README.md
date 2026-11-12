@@ -79,6 +79,7 @@ printf "3 3\n1 2 3\n2 -1 2\n1 1 2\n" | ./gs
 │   └── gram-schmidt/
 │       ├── README.md             # 项目细节
 │       ├── src/main.c            # C 实现
+│       ├── matlab/               # MATLAB 实现与实验脚本
 │       ├── matrix.xcodeproj/     # Xcode 工程
 │       └── report/
 │           ├── rapport-TP-2022.pdf   # 报告全文（法语）
@@ -174,6 +175,7 @@ placé à côté des sources, son groupe de fichiers pointant vers `src/`.
 │   └── gram-schmidt/
 │       ├── README.md             # détails du projet
 │       ├── src/main.c            # implémentation C
+│       ├── matlab/               # implémentations MATLAB et scripts d'expérience
 │       ├── matrix.xcodeproj/     # projet Xcode
 │       └── report/
 │           ├── rapport-TP-2022.pdf   # rapport complet (français)
